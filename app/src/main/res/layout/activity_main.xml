@@ -37,41 +37,73 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:weightSum="1">
 
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="18dp"
                         android:text="Parcial 1" />
 
                     <EditText
-                        android:layout_width="match_parent"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Parcial"
+
                         />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18dp"
+                        android:textColor="#D32F2F"
                         android:text="Trabajo" />
 
                     <EditText
-                        android:layout_width="match_parent"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Trabajo"
                         />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="18dp"
                         android:text="Taller" />
 
                     <EditText
-                        android:layout_width="match_parent"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Taller"
                         />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="100dp"
+                        android:textStyle="bold|italic"
+                        android:text="NOTAS PRIMER CORTE" />
 
                 </LinearLayout>
 
@@ -79,26 +111,144 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#da8200"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="This is tab 2" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="18dp"
+                        android:text="Parcial 1" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Parcial"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18dp"
+                        android:textColor="#D32F2F"
+                        android:text="Trabajo" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Trabajo"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="18dp"
+                        android:text="Taller" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Taller"
+                        />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="100dp"
+                        android:textStyle="bold|italic"
+                        android:text="NOTAS SEGUNDO CORTE" />
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#5b89ff"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="This is tab 3" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="18dp"
+                        android:text="Parcial" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Parcial"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18dp"
+                        android:textColor="#D32F2F"
+                        android:text="Trabajo" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Trabajo"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="18dp"
+                        android:text="Taller" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese nota Taller"
+                        />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="100dp"
+                        android:textStyle="bold|italic"
+                        android:text="NOTAS TERCER CORTE" />
+
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
