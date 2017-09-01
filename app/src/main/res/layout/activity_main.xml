@@ -48,7 +48,7 @@
                         android:layout_marginLeft="10dp"
                         android:textColor="#D32F2F"
                         android:textSize="18dp"
-                        android:text="Parcial 1" />
+                        android:text="Parcial:" />
 
                     <EditText
                         android:layout_width="200dp"
@@ -66,7 +66,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="18dp"
                         android:textColor="#D32F2F"
-                        android:text="Trabajo" />
+                        android:text="Trabajo:" />
 
                     <EditText
                         android:layout_width="200dp"
@@ -83,7 +83,7 @@
                         android:layout_marginLeft="10dp"
                         android:textColor="#D32F2F"
                         android:textSize="18dp"
-                        android:text="Taller" />
+                        android:text="Taller:" />
 
                     <EditText
                         android:layout_width="200dp"
@@ -120,7 +120,7 @@
                         android:layout_marginLeft="10dp"
                         android:textColor="#D32F2F"
                         android:textSize="18dp"
-                        android:text="Parcial 1" />
+                        android:text="Parcial:" />
 
                     <EditText
                         android:layout_width="200dp"
@@ -138,7 +138,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="18dp"
                         android:textColor="#D32F2F"
-                        android:text="Trabajo" />
+                        android:text="Trabajo:" />
 
                     <EditText
                         android:layout_width="200dp"
@@ -155,7 +155,7 @@
                         android:layout_marginLeft="10dp"
                         android:textColor="#D32F2F"
                         android:textSize="18dp"
-                        android:text="Taller" />
+                        android:text="Taller:" />
 
                     <EditText
                         android:layout_width="200dp"
