@@ -51,6 +51,7 @@
                         android:text="Parcial:" />
 
                     <EditText
+                        android:id="@+id/parcial_1"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -69,6 +70,7 @@
                         android:text="Trabajo:" />
 
                     <EditText
+                        android:id="@+id/trabajo_1"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -86,6 +88,7 @@
                         android:text="Taller:" />
 
                     <EditText
+                        android:id="@+id/taller_1"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -95,9 +98,45 @@
                         />
 
                     <TextView
+                        android:id="@+id/nota_corte_1"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="60dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp"
+                        android:text="Nota corte 1:" />
+
+                    <TextView
+                        android:id="@+id/semestre1"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="60dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp"
+                        android:text="Nota semestre:" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="260dp"
+                        android:layout_marginTop="0dp"
+                        android:onClick="corte1"
+                        android:padding="5dp"
+                        android:paddingBottom="6dp"
+                        android:paddingEnd="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingStart="5dp"
+                        android:text="CALCULAR" />
+
+                    <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="5dp"
                         android:gravity="center"
                         android:layout_centerHorizontal="true"
                         android:layout_alignParentBottom="true"
@@ -124,6 +163,7 @@
                         android:text="Parcial:" />
 
                     <EditText
+                        android:id="@+id/parcial_2"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -142,6 +182,7 @@
                         android:text="Trabajo:" />
 
                     <EditText
+                        android:id="@+id/trabajo_2"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -159,6 +200,7 @@
                         android:text="Taller:" />
 
                     <EditText
+                        android:id="@+id/taller_2"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -166,6 +208,43 @@
                         android:layout_marginBottom="10dp"
                         android:hint="Ingrese nota Taller"
                         />
+
+                    <TextView
+                        android:id="@+id/nota_corte_2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="60dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp"
+                        android:text="Nota corte 2:" />
+
+                    <TextView
+                        android:id="@+id/semestre2"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="60dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp"
+                        android:text="Nota semestre:" />
+
+                    <Button
+                        android:id="@+id/button_corte2"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="260dp"
+                        android:layout_marginTop="0dp"
+                        android:onClick="corte2"
+                        android:padding="5dp"
+                        android:paddingBottom="6dp"
+                        android:paddingEnd="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingStart="5dp"
+                        android:text="CALCULAR" />
+
 
                     <TextView
                         android:layout_width="fill_parent"
@@ -197,6 +276,7 @@
                         android:text="Parcial" />
 
                     <EditText
+                        android:id="@+id/parcial_3"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -215,6 +295,7 @@
                         android:text="Trabajo" />
 
                     <EditText
+                        android:id="@+id/trabajo_3"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -232,6 +313,7 @@
                         android:text="Taller" />
 
                     <EditText
+                        android:id="@+id/taller_3"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
@@ -241,9 +323,45 @@
                         />
 
                     <TextView
+                        android:id="@+id/nota_corte_3"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="60dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp"
+                        android:text="Nota corte 3:" />
+
+                    <TextView
+                        android:id="@+id/semestre3"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="60dp"
+                        android:textColor="#D32F2F"
+                        android:textSize="20dp"
+                        android:text="Nota semestre:" />
+
+                    <Button
+                        android:id="@+id/button_corte3"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="260dp"
+                        android:layout_marginTop="0dp"
+                        android:onClick="corte3"
+                        android:padding="5dp"
+                        android:paddingBottom="2dp"
+                        android:paddingEnd="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingStart="5dp"
+                        android:text="CALCULAR" />
+
+
+                    <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="0dp"
                         android:gravity="center"
                         android:layout_centerHorizontal="true"
                         android:layout_alignParentBottom="true"
