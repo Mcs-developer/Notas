@@ -103,6 +103,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="100dp"
                         android:textStyle="bold|italic"
+                        android:textColor="#2480C7"
                         android:text="NOTAS PRIMER CORTE" />
 
                 </LinearLayout>
@@ -175,6 +176,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="100dp"
                         android:textStyle="bold|italic"
+                        android:textColor="#2480C7"
                         android:text="NOTAS SEGUNDO CORTE" />
 
                 </LinearLayout>
@@ -247,6 +249,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="100dp"
                         android:textStyle="bold|italic"
+                        android:textColor="#2480C7"
                         android:text="NOTAS TERCER CORTE" />
 
                 </LinearLayout>
