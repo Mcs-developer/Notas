@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     TabHost tabHost;
     public TextView nota_corte_1, nota_corte_2, nota_corte_3, nota_definitiva;
-    public TextView semestre1, semestre2, semestre3;
     public EditText parcial_1, trabajo_1, taller_1;
     public EditText parcial_2, trabajo_2, taller_2;
     public EditText parcial_3, trabajo_3, taller_3;
