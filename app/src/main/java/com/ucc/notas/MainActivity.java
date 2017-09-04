@@ -1,23 +1,29 @@
 package com.ucc.notas;
 
+import android.renderscript.Double2;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.style.TtsSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
     TabHost tabHost;
-    public TextView nota_corte_1,nota_corte_2,nota_corte_3;
-    public TextView semestre1,semestre2,semestre3;
+    public TextView nota_corte_1, nota_corte_2, nota_corte_3, nota_definitiva;
+    public TextView semestre1, semestre2, semestre3;
     public EditText parcial_1, trabajo_1, taller_1;
     public EditText parcial_2, trabajo_2, taller_2;
     public EditText parcial_3, trabajo_3, taller_3;
-    public double semestre, count=0;
+    public double n1, n2, n3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,88 +51,96 @@ public class MainActivity extends AppCompatActivity {
         spec.setIndicator("C3");
         host.addTab(spec);
 
-        nota_corte_1 = (TextView)findViewById(R.id.nota_corte_1);
-        nota_corte_2 = (TextView)findViewById(R.id.nota_corte_2);
-        nota_corte_3 = (TextView)findViewById(R.id.nota_corte_3);
-        semestre1 = (TextView)findViewById(R.id.semestre1);
-        semestre2 = (TextView)findViewById(R.id.semestre2);
-        semestre3 = (TextView)findViewById(R.id.semestre3);
+        nota_corte_1 = (TextView) findViewById(R.id.nota_corte_1);
+        nota_corte_2 = (TextView) findViewById(R.id.nota_corte_2);
+        nota_corte_3 = (TextView) findViewById(R.id.nota_corte_3);
 
-        parcial_1 = (EditText)findViewById(R.id.parcial_1);
-        parcial_2 = (EditText)findViewById(R.id.parcial_2);
-        parcial_3 = (EditText)findViewById(R.id.parcial_3);
 
-        trabajo_1 = (EditText)findViewById(R.id.trabajo_1);
-        trabajo_2 = (EditText)findViewById(R.id.trabajo_2);
-        trabajo_3 = (EditText)findViewById(R.id.trabajo_3);
+        parcial_1 = (EditText) findViewById(R.id.parcial_1);
+        parcial_2 = (EditText) findViewById(R.id.parcial_2);
+        parcial_3 = (EditText) findViewById(R.id.parcial_3);
 
-        taller_1 = (EditText)findViewById(R.id.taller_1);
-        taller_2 = (EditText)findViewById(R.id.taller_2);
-        taller_3 = (EditText)findViewById(R.id.taller_3);
+        trabajo_1 = (EditText) findViewById(R.id.trabajo_1);
+        trabajo_2 = (EditText) findViewById(R.id.trabajo_2);
+        trabajo_3 = (EditText) findViewById(R.id.trabajo_3);
+
+        taller_1 = (EditText) findViewById(R.id.taller_1);
+        taller_2 = (EditText) findViewById(R.id.taller_2);
+        taller_3 = (EditText) findViewById(R.id.taller_3);
+
+        nota_definitiva = (TextView) findViewById(R.id.nota_definitiva);
     }
 
-    public void corte1(View v){
+    public void sameMethod(View v) {
+        int idView = v.getId();
+        String msj = "";
+        double parcial;
+        double taller;
+        double trabajo;
+        double nota_taller_trabajo;
+        try {
+            switch (idView) {
+                case R.id.button:
 
-        double parcial  = Double.parseDouble(parcial_1.getText().toString());
-        double taller   = Double.parseDouble(taller_1.getText().toString());
-        double trabajo  = Double.parseDouble(trabajo_1.getText().toString());
-        double nota_taller_trabajo, nota_corte;
+                    parcial = Double.parseDouble(parcial_1.getText().toString());
+                    taller = Double.parseDouble(taller_1.getText().toString());
+                    trabajo = Double.parseDouble(trabajo_1.getText().toString());
 
-        parcial = parcial * 0.5;
-        nota_taller_trabajo  = ((taller + trabajo)/2)*0.5;
+                    parcial = parcial * 0.5;
+                    nota_taller_trabajo = ((taller + trabajo) / 2) * 0.5;
 
-        nota_corte = parcial + nota_taller_trabajo;
+                    n1 = parcial + nota_taller_trabajo;
 
-        nota_corte_1.setText("Nota corte 1: " + nota_corte);
+                    nota_corte_1.setText("Nota corte 1: " + n1);
 
-        semestre(nota_corte*0.3);
-    }
+                    calcularDefinitiva();
 
-    public void corte2(View v){
+                    break;
+                case R.id.button_corte2:
+                    parcial = Double.parseDouble(parcial_2.getText().toString());
+                    taller = Double.parseDouble(taller_2.getText().toString());
+                    trabajo = Double.parseDouble(trabajo_2.getText().toString());
 
-        double parcial  = Double.parseDouble(parcial_2.getText().toString());
-        double taller   = Double.parseDouble(taller_2.getText().toString());
-        double trabajo  = Double.parseDouble(trabajo_2.getText().toString());
-        double nota_taller_trabajo, nota_corte;
 
-        parcial = parcial * 0.5;
-        nota_taller_trabajo  = ((taller + trabajo)/2)*0.5;
+                    parcial = parcial * 0.5;
+                    nota_taller_trabajo = ((taller + trabajo) / 2) * 0.5;
 
-        nota_corte = parcial + nota_taller_trabajo;
+                    n2 = parcial + nota_taller_trabajo;
 
-        nota_corte_2.setText("Nota corte 1: " + nota_corte);
+                    nota_corte_2.setText("Nota corte 2: " + n2);
 
-        semestre(nota_corte*0.3);
-    }
+                    calcularDefinitiva();
+                    break;
+                case R.id.button_corte3:
+                    parcial = Double.parseDouble(parcial_3.getText().toString());
+                    taller = Double.parseDouble(taller_3.getText().toString());
+                    trabajo = Double.parseDouble(trabajo_3.getText().toString());
 
-    public void corte3(View v){
 
-        double parcial  = Double.parseDouble(parcial_3.getText().toString());
-        double taller   = Double.parseDouble(taller_3.getText().toString());
-        double trabajo  = Double.parseDouble(trabajo_3.getText().toString());
-        double nota_taller_trabajo, nota_corte;
+                    parcial = parcial * 0.5;
+                    nota_taller_trabajo = ((taller + trabajo) / 2) * 0.5;
 
-        parcial = parcial * 0.5;
-        nota_taller_trabajo  = ((taller + trabajo)/2)*0.5;
+                    n3 = parcial + nota_taller_trabajo;
 
-        nota_corte = parcial + nota_taller_trabajo;
+                    nota_corte_3.setText("Nota corte 3: " + n3);
 
-        nota_corte_3.setText("Nota corte 1: " + nota_corte);
+                    calcularDefinitiva();
+                    break;
+            }
 
-        semestre(nota_corte*0.4);
-    }
 
-    public void semestre(double a){
-
-        count++;
-
-        if(count<=3) {
-            semestre = semestre + a;
-
-            semestre1.setText("Nota semestre: " + semestre);
-            semestre2.setText("Nota semestre: " + semestre);
-            semestre3.setText("Nota semestre: " + semestre);
+        } catch (NumberFormatException ex) {
+            Toast.makeText(this, "Verifique que un campo no es un número", Toast.LENGTH_SHORT);
         }
+    }
+
+
+    public void calcularDefinitiva() {
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
+        double total = (n1 * 0.3) + (n2 * 0.3) + (n3 * 0.4);
+
+        nota_definitiva.setText("Nota Definitiva: " + df.format(total));
 
     }
 

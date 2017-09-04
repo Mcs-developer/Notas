@@ -8,19 +8,18 @@
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="0dp"
-        android:layout_height="495dp"
+        android:layout_height="448dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="0dp"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="90dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TabWidget
@@ -44,20 +43,20 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:text="Parcial:"
                         android:textColor="#D32F2F"
-                        android:textSize="18dp"
-                        android:text="Parcial:" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/parcial_1"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Parcial"
+                        android:inputType="numberDecimal"
 
                         />
 
@@ -65,57 +64,45 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:textSize="18dp"
+                        android:text="Trabajo:"
                         android:textColor="#D32F2F"
-                        android:text="Trabajo:" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/trabajo_1"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Trabajo"
-                        />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:text="Taller:"
                         android:textColor="#D32F2F"
-                        android:textSize="18dp"
-                        android:text="Taller:" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/taller_1"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Taller"
-                        />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:id="@+id/nota_corte_1"
-                        android:layout_width="350dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="60dp"
-                        android:textColor="#D32F2F"
-                        android:textSize="20dp"
-                        android:text="Nota corte 1:" />
-
-                    <TextView
-                        android:id="@+id/semestre1"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:layout_marginLeft="60dp"
+                        android:text="Nota corte 1:"
                         android:textColor="#D32F2F"
-                        android:textSize="20dp"
-                        android:text="Nota semestre:" />
+                        android:textSize="20dp" />
 
                     <Button
                         android:id="@+id/button"
@@ -124,7 +111,7 @@
                         android:layout_marginBottom="0dp"
                         android:layout_marginLeft="260dp"
                         android:layout_marginTop="0dp"
-                        android:onClick="corte1"
+                        android:onClick="sameMethod"
                         android:padding="5dp"
                         android:paddingBottom="6dp"
                         android:paddingEnd="5dp"
@@ -132,18 +119,6 @@
                         android:paddingRight="5dp"
                         android:paddingStart="5dp"
                         android:text="CALCULAR" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:layout_centerHorizontal="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="100dp"
-                        android:textStyle="bold|italic"
-                        android:textColor="#2480C7"
-                        android:text="NOTAS PRIMER CORTE" />
 
                 </LinearLayout>
 
@@ -156,20 +131,20 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:text="Parcial:"
                         android:textColor="#D32F2F"
-                        android:textSize="18dp"
-                        android:text="Parcial:" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/parcial_2"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Parcial"
+                        android:inputType="numberDecimal"
 
                         />
 
@@ -177,57 +152,45 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:textSize="18dp"
+                        android:text="Trabajo:"
                         android:textColor="#D32F2F"
-                        android:text="Trabajo:" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/trabajo_2"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Trabajo"
-                        />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:text="Taller:"
                         android:textColor="#D32F2F"
-                        android:textSize="18dp"
-                        android:text="Taller:" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/taller_2"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Taller"
-                        />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:id="@+id/nota_corte_2"
-                        android:layout_width="150dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="60dp"
-                        android:textColor="#D32F2F"
-                        android:textSize="20dp"
-                        android:text="Nota corte 2:" />
-
-                    <TextView
-                        android:id="@+id/semestre2"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:layout_marginLeft="60dp"
+                        android:text="Nota corte 2:"
                         android:textColor="#D32F2F"
-                        android:textSize="20dp"
-                        android:text="Nota semestre:" />
+                        android:textSize="20dp" />
 
                     <Button
                         android:id="@+id/button_corte2"
@@ -236,7 +199,7 @@
                         android:layout_marginBottom="0dp"
                         android:layout_marginLeft="260dp"
                         android:layout_marginTop="0dp"
-                        android:onClick="corte2"
+                        android:onClick="sameMethod"
                         android:padding="5dp"
                         android:paddingBottom="6dp"
                         android:paddingEnd="5dp"
@@ -244,19 +207,6 @@
                         android:paddingRight="5dp"
                         android:paddingStart="5dp"
                         android:text="CALCULAR" />
-
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
-                        android:gravity="center"
-                        android:layout_centerHorizontal="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="100dp"
-                        android:textStyle="bold|italic"
-                        android:textColor="#2480C7"
-                        android:text="NOTAS SEGUNDO CORTE" />
 
                 </LinearLayout>
 
@@ -269,20 +219,20 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:text="Parcial"
                         android:textColor="#D32F2F"
-                        android:textSize="18dp"
-                        android:text="Parcial" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/parcial_3"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Parcial"
+                        android:inputType="numberDecimal"
 
                         />
 
@@ -290,57 +240,45 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:textSize="18dp"
+                        android:text="Trabajo"
                         android:textColor="#D32F2F"
-                        android:text="Trabajo" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/trabajo_3"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Trabajo"
-                        />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:text="Taller"
                         android:textColor="#D32F2F"
-                        android:textSize="18dp"
-                        android:text="Taller" />
+                        android:textSize="18dp" />
 
                     <EditText
                         android:id="@+id/taller_3"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_marginLeft="50dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="50dp"
                         android:hint="Ingrese nota Taller"
-                        />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:id="@+id/nota_corte_3"
-                        android:layout_width="150dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="60dp"
-                        android:textColor="#D32F2F"
-                        android:textSize="20dp"
-                        android:text="Nota corte 3:" />
-
-                    <TextView
-                        android:id="@+id/semestre3"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:layout_marginLeft="60dp"
+                        android:text="Nota corte 3:"
                         android:textColor="#D32F2F"
-                        android:textSize="20dp"
-                        android:text="Nota semestre:" />
+                        android:textSize="20dp" />
 
                     <Button
                         android:id="@+id/button_corte3"
@@ -348,7 +286,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="260dp"
                         android:layout_marginTop="0dp"
-                        android:onClick="corte3"
+                        android:onClick="sameMethod"
                         android:padding="5dp"
                         android:paddingBottom="2dp"
                         android:paddingEnd="5dp"
@@ -357,22 +295,27 @@
                         android:paddingStart="5dp"
                         android:text="CALCULAR" />
 
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:gravity="center"
-                        android:layout_centerHorizontal="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="100dp"
-                        android:textStyle="bold|italic"
-                        android:textColor="#2480C7"
-                        android:text="NOTAS TERCER CORTE" />
-
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>
+
+    <TextView
+        android:id="@+id/nota_definitiva"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginBottom="0dp"
+        android:background="#0D47A1"
+        android:paddingTop="20dp"
+        android:text="Nota Definitiva"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabHost"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
