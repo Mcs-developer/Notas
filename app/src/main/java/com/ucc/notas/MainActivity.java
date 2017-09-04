@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         nota_definitiva = (TextView) findViewById(R.id.nota_definitiva);
     }
 
-    public void sameMethod(View v) {
+    public void calcularNotaCorte(View v) {
         int idView = v.getId();
         String msj = "";
         double parcial;
@@ -85,6 +85,20 @@ public class MainActivity extends AppCompatActivity {
                     parcial = Double.parseDouble(parcial_1.getText().toString());
                     taller = Double.parseDouble(taller_1.getText().toString());
                     trabajo = Double.parseDouble(trabajo_1.getText().toString());
+
+                    if(!validarNota(parcial)) {
+                        Toast.makeText(this, "Verifique la nota del Parcial",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else if(!validarNota(taller)){
+                        Toast.makeText(this,"Verifique la nota del taller", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else if(!validarNota(trabajo)){
+                        Toast.makeText(this,"Verifique la nota del trabajo", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+
 
                     parcial = parcial * 0.5;
                     nota_taller_trabajo = ((taller + trabajo) / 2) * 0.5;
@@ -101,6 +115,18 @@ public class MainActivity extends AppCompatActivity {
                     taller = Double.parseDouble(taller_2.getText().toString());
                     trabajo = Double.parseDouble(trabajo_2.getText().toString());
 
+                    if(!validarNota(parcial)) {
+                        Toast.makeText(this, "Verifique la nota del Parcial",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else if(!validarNota(taller)){
+                        Toast.makeText(this,"Verifique la nota del taller", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else if(!validarNota(trabajo)){
+                        Toast.makeText(this,"Verifique la nota del trabajo", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
 
                     parcial = parcial * 0.5;
                     nota_taller_trabajo = ((taller + trabajo) / 2) * 0.5;
@@ -117,6 +143,19 @@ public class MainActivity extends AppCompatActivity {
                     trabajo = Double.parseDouble(trabajo_3.getText().toString());
 
 
+                    if(!validarNota(parcial)) {
+                        Toast.makeText(this, "Verifique la nota del Parcial",Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else if(!validarNota(taller)){
+                        Toast.makeText(this,"Verifique la nota del taller", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    else if(!validarNota(trabajo)){
+                        Toast.makeText(this,"Verifique la nota del trabajo", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+
                     parcial = parcial * 0.5;
                     nota_taller_trabajo = ((taller + trabajo) / 2) * 0.5;
 
@@ -132,6 +171,10 @@ public class MainActivity extends AppCompatActivity {
         } catch (NumberFormatException ex) {
             Toast.makeText(this, "Verifique que un campo no es un número", Toast.LENGTH_SHORT);
         }
+    }
+
+    public boolean validarNota(double n){
+        return  n >= 0 && n <= 5;
     }
 
 
