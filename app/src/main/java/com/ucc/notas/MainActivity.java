@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public EditText parcial_2, trabajo_2, taller_2;
     public EditText parcial_3, trabajo_3, taller_3;
     public double n1, n2, n3;
-
+// test to commits
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
