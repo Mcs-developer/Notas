@@ -1,5 +1,6 @@
 package com.ucc.notas;
 
+import android.content.Intent;
 import android.renderscript.Double2;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 //test cesar from dev branch
     TabHost tabHost;
-    public TextView nota_corte_1, nota_corte_2, nota_corte_3, nota_definitiva;
+    public TextView nota_corte_1, nota_corte_2, nota_corte_3, nota_definitiva, textUserName;
     public EditText parcial_1, trabajo_1, taller_1;
     public EditText parcial_2, trabajo_2, taller_2;
     public EditText parcial_3, trabajo_3, taller_3;
@@ -30,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Recibir nombre de usuario que se ingresa en el Acitivity Login
+        Bundle bundle = getIntent().getExtras();
+        String userName = bundle.getString("user");
+        textUserName = (TextView)findViewById(R.id.userName);
+        textUserName.setText("Bienvenido " + userName);
+
+        // Declaracion del Tab host para almacenar los 3 tabs de las notas
         TabHost host = (TabHost) findViewById(R.id.tabHost);
         host.setup();
 
@@ -169,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         } catch (NumberFormatException ex) {
-            Toast.makeText(this, "Verifique que un campo no es un número", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Verifique que un campo no es un número", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -185,6 +193,28 @@ public class MainActivity extends AppCompatActivity {
 
         nota_definitiva.setText("Nota Definitiva: " + df.format(total));
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_option,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Determinar la opcion seleccionada
+        Intent signOut;
+
+
+        switch (item.getItemId()){
+            case R.id.signOut:
+               signOut = new Intent(this, Login.class);
+                startActivity(signOut);
+                finish();
+                break;
+        }
+        return true;
     }
 
 
