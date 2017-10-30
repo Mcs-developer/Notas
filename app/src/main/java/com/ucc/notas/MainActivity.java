@@ -115,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
 
                     nota_corte_1.setText("Nota corte 1: " + n1);
 
-                    calcularDefinitiva();
 
                     break;
                 case R.id.button_corte2:
@@ -143,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
 
                     nota_corte_2.setText("Nota corte 2: " + n2);
 
-                    calcularDefinitiva();
                     break;
                 case R.id.button_corte3:
                     parcial = Double.parseDouble(parcial_3.getText().toString());
@@ -171,10 +169,10 @@ public class MainActivity extends AppCompatActivity {
 
                     nota_corte_3.setText("Nota corte 3: " + n3);
 
-                    calcularDefinitiva();
                     break;
             }
 
+            calcularDefinitiva();
 
         } catch (NumberFormatException ex) {
             Toast.makeText(this, "Verifique que un campo no es un número", Toast.LENGTH_SHORT).show();
